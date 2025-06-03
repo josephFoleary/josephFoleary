@@ -1,0 +1,122 @@
+\documentclass[letterpaper, 11pt]{article}
+\usepackage[top = 1in, bottom = 1in, left = 0.5in, right = 0.5in]{geometry}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage[backend=bibtex,style=numeric]{biblatex}
+\usepackage{float}
+\usepackage{array}
+\usepackage[en-US]{datetime2}
+\usepackage{titling}
+\usepackage{titlesec}
+
+\setlength{\droptitle}{-10em}
+\titlespacing{\section}{0pt}{5.5ex plus 1ex minus .2ex}{1ex plus .2ex}
+\setlength{\intextsep}{0pt}
+
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
+\newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}p{#1}}
+\newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
+
+\DeclareCiteCommand{\fullcite}
+  {\usebibmacro{prenote}}
+   {{\printtext[labelnumberwidth]{% New
+        \printfield{prefixnumber}% New
+        \printfield{labelnumber}}} % New
+  \usedriver
+     {\DeclareNameAlias{sortname}{default}}
+     {\thefield{entrytype}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
+\title{\huge \textbf{Joseph Ferdinand O'Leary}}
+\renewcommand\maketitlehookb{\vspace{-5ex}}
+\author{Curriculum Viate}
+\renewcommand\maketitlehookc{\vspace{-5ex}}
+\date{\endgraf\rule{\textwidth}{.4pt}}
+
+\DTMlangsetup{showdayofmonth=false}
+
+\bibliography{JosephOLearyPublications}
+
+\begin{document}
+\maketitle
+\vspace{-1cm}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{L{0.3\textwidth} C{0.3\textwidth} R{0.3\textwidth}}
+        \today & 443-425-7950 & joleary1@umd.edu \\
+         & & joe.oleary.314@gmail.com \\
+    \end{tabular}
+\end{table}
+\vspace{-0.7cm}
+\section{Education}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{L{0.7\textwidth} R{0.2\textwidth}}
+        \textbf{Ph.D., Reliability Engineering} & Ant. May 2026 \\
+        \hspace{5pt} Advisor: Dr. Yunfei Zhao & \\
+        \hspace{5pt} Dissertation Topic: \textit{ Computational Improvements for Dynamic Probabilistic Risk Assessment} &  \\
+        \hspace{5pt} University of Maryland, College Park & \\
+         & \\
+        \textbf{B.S., Mechanical Engineering} & May 2022 \\
+        \hspace{5pt} Minor: Nuclear Engineering & \\
+        \hspace{5pt} University of Maryland, College Park & \\
+         & \\
+    \end{tabular}
+\end{table}
+
+\section{Research Experience}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{L{0.7\textwidth} R{0.2\textwidth}}
+        \textbf{Improving the Efficiency of Dynamic Probabilistic Risk Assessment} & Aug 2023 - Present \\
+        \hspace{5pt} \textit{Graduate Researcher} \hspace{25pt} Project PI: Dr. Yunfei Zhao & Univ. of MD\\
+        \hspace{5pt} Application of advanced machine learning techniques to decrease the computational cost of dynamic PRA.
+        Responsible for creation and implementation of novel algorithm and previous solutions for dynamic PRA for comparison. & References \cite{Zhao2024RAMS,OLeary2024improving} \\
+
+        \textbf{Improvement of Bayesian Network Models for Human Reliability Analysis} & Jan 2023 - Aug 2023 \\
+        \hspace{5pt} \textit{Graduate Researcher} \hspace{25pt} Project PI: Dr. Katrina Groth & Univ. of MD \\
+        \hspace{5pt} Creation of new Bayesian network models for human reliability analysis using cognitive science and expert elicitation.
+        Responsible for generating quantification schemes for the networks. & Reference \cite{OLeary2023survey} \\
+        \hspace{5pt}
+    \end{tabular}
+\end{table}
+
+\section{Teaching and Mentoring Experience}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{L{0.7\textwidth} R{0.2\textwidth}}
+    	\textbf{Undergraduate Researcher Mentoring} & Aug 2024 - Nov 2024 \\
+    	\hspace{5pt} \textit{Mentor for an undergraduate student} & Univ. of MD \\
+
+        \textbf{ENME472 Capstone Engineering Design} & Aug 2022 - Dec 2022 \\
+        \hspace{5pt} \textit{Graduate Teaching Assistant} &  Univ. of MD\\
+        % \hspace{5pt} Application of advanced machine learning techniques to decrease the computational cost of dynamic PRA. & \\
+
+        \textbf{ENME350 Analog Electronics} & Aug 2021 - May 2022 \\
+        \hspace{5pt} \textit{Undergraduate Teaching Fellow} & Univ. of MD\\
+
+
+        \textbf{ENME382 Introductory Materials Engineering} & Aug 2020 - May 2021 \\
+        \hspace{5pt} \textit{Undergraduate Teaching Fellow} & Univ. of MD\\
+
+    \end{tabular}
+\end{table}
+
+\section{Publications}
+% \subsection{Journal Publications}
+\subsection{Conference Proceedings}
+\begin{itemize}
+	\item \fullcite{OLeary2024improving}
+    \item \fullcite{Zhao2024RAMS}
+    \item \fullcite{OLeary2023survey}
+    \item \fullcite{Zaleski2022}
+    \item \fullcite{Doosthosseini2022}
+\end{itemize}
+% \subsection{Book Chapters}
+% \subsection{Other}
+
+
+
+\end{document}
